@@ -5,7 +5,7 @@ import matplotlib.pyplot as mtp
 import pandas as pd
 
 #importing datasets
-data_set= pd.read_csv('user_data.csv')
+data_set= pd.read_csv("C:/Users/Admin/Downloads/suv_data.csv")
 
 #Extracting Independent and dependent Variable
 x= data_set.iloc[:, [2,3]].values
@@ -33,7 +33,7 @@ y_pred= classifier.predict(x_test)
 \
 #Creating the Confusion matrix
 from sklearn.metrics import confusion_matrix
-cm= confusion_matrix()
+cm= confusion_matrix(y_test,y_pred)
 
 #Visualizing the training set result  
 from matplotlib.colors import ListedColormap  
